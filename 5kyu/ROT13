@@ -1,0 +1,15 @@
+import string
+def rot13(message):
+    input = list(string.ascii_letters)
+    output = list("nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM")
+    message_list = list(message)
+    final = []
+    
+    for m in message_list:
+        if m in input:
+            index = input.index(m)
+            final.append(output[index])
+        else:
+            final.append(m)
+    final_str = "".join(final)
+    return final_str

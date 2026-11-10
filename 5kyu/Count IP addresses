@@ -1,0 +1,7 @@
+import ipaddress
+def ips_between(start, end):
+    start = ipaddress.ip_address(start)
+    end = ipaddress.ip_address(end)
+    
+    result = int(end) - int(start)
+    return result

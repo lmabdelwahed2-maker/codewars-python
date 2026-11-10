@@ -1,0 +1,14 @@
+def scramble(s1, s2):
+    my_dict = {}
+    for s in s1:
+        if s in my_dict:
+            my_dict[s] += 1
+        else:
+            my_dict[s] = 1
+            
+    for ss in s2:
+        if ss not in my_dict or my_dict.get(ss) < 1:
+            return False
+        else:
+            my_dict[ss] -= 1
+    return True
